@@ -67,9 +67,10 @@ class Fetcher
 
         return new Book($item['volumeInfo']['title'],
             $this->getOrDefault($item['volumeInfo'], 'subtitle', null),
+            (int) $this->getOrDefault($item['volumeInfo'], 'pageCount', null),
             $this->getOrDefault($item['volumeInfo'], 'authors', null),
             $this->getOrDefault($item['volumeInfo'], 'printType', null),
-            intval($this->getOrDefault($item['volumeInfo'], 'pageCount', null)),
+            (int) $this->getOrDefault($item['volumeInfo'], 'pageCount', null),
             $this->getOrDefault($item['volumeInfo'], 'publisher', null),
             $publishedDate,
             $publishedDateFormat,

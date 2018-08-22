@@ -8,6 +8,7 @@ class Book
 {
     public $title;
     public $subtitle;
+    public $description;
     public $authors;
     public $printType;
     public $pageCount;
@@ -24,6 +25,7 @@ class Book
      *
      * @param string   $title
      * @param string   $subtitle
+     * @param string   $description
      * @param array    $authors
      * @param string   $printType
      * @param int      $pageCount
@@ -34,10 +36,11 @@ class Book
      * @param string   $language
      * @param array    $categories
      */
-    public function __construct($title, $subtitle, array $authors, $printType, $pageCount, $publisher, DateTime $publishedDate = null, $publishedDateFormat, $averageRating, $thumbnail, $language, array $categories)
+    public function __construct($title, $subtitle, $description, array $authors, $printType, $pageCount, $publisher, DateTime $publishedDate = null, $publishedDateFormat, $averageRating, $thumbnail, $language, array $categories)
     {
         $this->title = $title;
         $this->subtitle = $subtitle;
+        $this->description = $description;
         $this->authors = $authors;
         $this->printType = $printType;
         $this->pageCount = $pageCount;
